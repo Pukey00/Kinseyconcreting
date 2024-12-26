@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1604715892639-61d265a76eb6?q=80&w=1200",
+    url: "/lovable-uploads/103bae6e-535c-4546-9ded-a4d779536131.png",
     alt: "Concrete driveway installation",
     title: "Driveways",
   },
