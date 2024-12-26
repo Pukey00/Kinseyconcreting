@@ -3,16 +3,20 @@ import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
 import { ServiceArea } from "@/components/ServiceArea";
 import { ContactForm } from "@/components/ContactForm";
+import { Header } from "@/components/Header";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <Gallery />
-      <Testimonials />
-      <ServiceArea />
-      <ContactForm />
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen pt-24">
+        <Hero />
+        <Gallery />
+        <Testimonials />
+        <ServiceArea />
+        <ContactForm />
+      </main>
+    </>
   );
 };
 
