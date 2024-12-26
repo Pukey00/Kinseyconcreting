@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -29,6 +30,12 @@ export const Hero = () => {
         >
           Contact Now
         </Button>
+        <div className="mt-4 flex items-center justify-center gap-2 text-white">
+          <Phone className="w-5 h-5" />
+          <a href="tel:0457078612" className="text-lg hover:underline">
+            0457 078 612
+          </a>
+        </div>
       </div>
     </div>
   );
