@@ -13,7 +13,7 @@ const images = [
     title: "Patios",
   },
   {
-    url: "https://images.unsplash.com/photo-1621510456681-2330135e5871?q=80&w=1200",
+    url: "/lovable-uploads/63492898-62fe-4a89-86ca-3efb5aecc484.png",
     alt: "Commercial concrete flooring",
     title: "Commercial",
   },
