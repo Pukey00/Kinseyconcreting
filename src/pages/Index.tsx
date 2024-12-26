@@ -4,6 +4,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { ServiceArea } from "@/components/ServiceArea";
 import { ContactForm } from "@/components/ContactForm";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <ServiceArea />
         <ContactForm />
       </main>
+      <Footer />
     </>
   );
 };
