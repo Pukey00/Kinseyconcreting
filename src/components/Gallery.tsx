@@ -8,7 +8,7 @@ const images = [
     title: "Driveways",
   },
   {
-    url: "https://images.unsplash.com/photo-1580236044277-2f5f7a590e10?q=80&w=1200",
+    url: "/lovable-uploads/75b15a45-c698-494c-a990-38cdce748ddd.png",
     alt: "Concrete patio design",
     title: "Patios",
   },
