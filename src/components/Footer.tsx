@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="bg-white text-secondary py-8 mt-16 border-t">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="flex gap-8 items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
             <img 
               src="/lovable-uploads/5b445e2c-a42d-4a88-a7f6-971140657fbd.png" 
               alt="Kinsey Concreting Logo" 
