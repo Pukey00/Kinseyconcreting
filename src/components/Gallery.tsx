@@ -18,7 +18,7 @@ const images = [
     title: "Commercial",
   },
   {
-    url: "https://images.unsplash.com/photo-1621947081720-86970823b77a?q=80&w=1200",
+    url: "/lovable-uploads/ee94fcdc-fbf7-44ef-b357-4a310e0c5fe5.png",
     alt: "Decorative concrete work",
     title: "Decorative",
   },
