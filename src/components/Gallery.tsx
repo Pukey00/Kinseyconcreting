@@ -3,22 +3,22 @@ import { Card } from "@/components/ui/card";
 
 const images = [
   {
-    url: "/placeholder.svg",
+    url: "https://images.unsplash.com/photo-1604715892639-61d265a76eb6?q=80&w=1200",
     alt: "Concrete driveway installation",
     title: "Driveways",
   },
   {
-    url: "/placeholder.svg",
+    url: "https://images.unsplash.com/photo-1580236044277-2f5f7a590e10?q=80&w=1200",
     alt: "Concrete patio design",
     title: "Patios",
   },
   {
-    url: "/placeholder.svg",
+    url: "https://images.unsplash.com/photo-1621510456681-2330135e5871?q=80&w=1200",
     alt: "Commercial concrete flooring",
     title: "Commercial",
   },
   {
-    url: "/placeholder.svg",
+    url: "https://images.unsplash.com/photo-1621947081720-86970823b77a?q=80&w=1200",
     alt: "Decorative concrete work",
     title: "Decorative",
   },
