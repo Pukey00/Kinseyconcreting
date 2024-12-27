@@ -3,24 +3,29 @@ import { Card } from "@/components/ui/card";
 
 const images = [
   {
-    url: "/lovable-uploads/103bae6e-535c-4546-9ded-a4d779536131.png",
-    alt: "Concrete driveway installation",
-    title: "Driveways",
+    url: "/lovable-uploads/8fbf838c-7570-4884-869b-02e17d6d8d28.png",
+    alt: "Decorative concrete finish",
+    title: "Decorative",
   },
   {
-    url: "/lovable-uploads/75b15a45-c698-494c-a990-38cdce748ddd.png",
-    alt: "Concrete patio design",
-    title: "Patios",
-  },
-  {
-    url: "/lovable-uploads/63492898-62fe-4a89-86ca-3efb5aecc484.png",
-    alt: "Commercial concrete flooring",
+    url: "/lovable-uploads/d71fcb07-8698-4e98-a94f-ad0a942f2830.png",
+    alt: "Commercial concrete installation",
     title: "Commercial",
   },
   {
-    url: "/lovable-uploads/ee94fcdc-fbf7-44ef-b357-4a310e0c5fe5.png",
-    alt: "Decorative concrete work",
-    title: "Decorative",
+    url: "/lovable-uploads/47e48125-8e6d-4ec1-9ffa-d1c412779948.png",
+    alt: "Concrete pathway installation",
+    title: "Pathways",
+  },
+  {
+    url: "/lovable-uploads/4dc31dd1-33c4-466a-8afb-d1ded72973ad.png",
+    alt: "Pool surrounds concrete work",
+    title: "Pools",
+  },
+  {
+    url: "/lovable-uploads/c8509ae1-7143-42e9-a01a-2c006d09aaea.png",
+    alt: "Rural concrete solutions",
+    title: "Rural",
   },
 ];
 
