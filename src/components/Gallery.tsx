@@ -89,7 +89,7 @@ export const Gallery = () => {
             onClick={handlePrevious}
             aria-label="Previous image"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6 text-black" />
           </Button>
           <Button
             variant="secondary"
@@ -98,7 +98,7 @@ export const Gallery = () => {
             onClick={handleNext}
             aria-label="Next image"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-6 w-6 text-black" />
           </Button>
         </div>
       </div>
