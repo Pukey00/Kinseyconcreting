@@ -16,7 +16,7 @@ export const Hero = () => {
         }}
       ></div>
       <div className="absolute inset-0 bg-black/70 z-10"></div>
-      <div className="container mx-auto px-4 z-20 text-center">
+      <div className="container mx-auto px-4 z-20 text-center pt-8 md:pt-0">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
           Quality Concrete Solutions
         </h1>
