@@ -6,6 +6,9 @@ import { useToast } from "@/components/ui/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
+// Initialize EmailJS
+emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your public key
+
 export const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,8 +22,8 @@ export const ContactForm = () => {
     
     try {
       await emailjs.send(
-        'default_service', // Service ID from EmailJS
-        'template_default', // Template ID from EmailJS
+        'YOUR_SERVICE_ID', // Replace with your Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your Template ID
         {
           from_name: formData.get('name'),
           from_email: formData.get('email'),
@@ -28,7 +31,7 @@ export const ContactForm = () => {
           message: formData.get('message'),
           to_email: 'lhollins0@gmail.com'
         },
-        'YOUR_PUBLIC_KEY' // Public Key from EmailJS
+        'YOUR_PUBLIC_KEY' // Replace with your Public Key
       );
 
       toast({
