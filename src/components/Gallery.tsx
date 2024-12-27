@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   {
@@ -39,6 +41,18 @@ export const Gallery = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handlePrevious = () => {
+    setCurrentIndex((current) => 
+      current === 0 ? images.length - 1 : current - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((current) => 
+      (current + 1) % images.length
+    );
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -68,6 +82,24 @@ export const Gallery = () => {
               </Card>
             ))}
           </div>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white"
+            onClick={handlePrevious}
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white"
+            onClick={handleNext}
+            aria-label="Next image"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
         </div>
       </div>
     </section>
