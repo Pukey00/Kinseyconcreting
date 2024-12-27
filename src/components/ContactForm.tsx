@@ -2,11 +2,51 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { useToast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 export const ContactForm = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted - to be implemented");
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      await emailjs.send(
+        'default_service', // Service ID from EmailJS
+        'template_default', // Template ID from EmailJS
+        {
+          from_name: formData.get('name'),
+          from_email: formData.get('email'),
+          phone: formData.get('phone'),
+          message: formData.get('message'),
+          to_email: 'lhollins0@gmail.com'
+        },
+        'YOUR_PUBLIC_KEY' // Public Key from EmailJS
+      );
+
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -17,22 +57,26 @@ export const ContactForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">Name</label>
-              <Input placeholder="Your name" />
+              <Input name="name" placeholder="Your name" required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">Email</label>
-              <Input type="email" placeholder="Your email" />
+              <Input name="email" type="email" placeholder="Your email" required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">Phone</label>
-              <Input type="tel" placeholder="Your phone number" />
+              <Input name="phone" type="tel" placeholder="Your phone number" required />
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">Message</label>
-              <Textarea placeholder="Tell us about your project" className="h-32" />
+              <Textarea name="message" placeholder="Tell us about your project" className="h-32" required />
             </div>
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-              Send Message
+            <Button 
+              type="submit" 
+              className="w-full bg-primary hover:bg-primary/90"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </Card>
