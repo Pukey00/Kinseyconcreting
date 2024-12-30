@@ -29,7 +29,7 @@ export const ContactForm = () => {
           from_email: formData.get('email'),
           phone: formData.get('phone'),
           message: formData.get('message'),
-          to_email: 'lhollins0@gmail.com'
+          to_email: 'kinseyconcreting@gmail.com'
         },
         'XdqQa2EHEymC9Qev8'
       );
